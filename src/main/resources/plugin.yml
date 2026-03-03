@@ -1,0 +1,44 @@
+name: AuctionPrime
+version: ${project.version}
+main: me.manudev.auctionprime.AuctionPrime
+api-version: '1.21'
+description: Sistema completo di casa d'aste per Minecraft
+authors: [ManuDev]
+depend: [Vault]
+softdepend: [HeadDatabase]
+
+commands:
+  mercato:
+    description: Apri la casa d'aste
+    aliases: [asta, negozio]
+    usage: /mercato [vendi <prezzo>|cerca|inserzioni|scaduti|venduti|admin|reload]
+    permission: auctionprime.use
+
+permissions:
+  auctionprime.use:
+    description: Permesso base per usare la casa d'aste
+    default: true
+  auctionprime.sell:
+    description: Permesso per vendere oggetti
+    default: true
+  auctionprime.sell.unlimited:
+    description: Permesso per inserzioni illimitate
+    default: op
+  auctionprime.admin:
+    description: Permesso amministratore
+    default: op
+  auctionprime.admin.reload:
+    description: Ricarica la configurazione
+    default: op
+  auctionprime.bypass.cooldown:
+    description: Ignora il cooldown tra inserzioni
+    default: op
+  auctionprime.bypass.fees:
+    description: Ignora le tasse di inserzione
+    default: op
+  auctionprime.bypass.restrictions:
+    description: Ignora le restrizioni sugli oggetti
+    default: op
+  auctionprime.notify:
+    description: Ricevi notifiche sulle nuove inserzioni
+    default: true

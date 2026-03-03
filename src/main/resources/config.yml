@@ -1,0 +1,171 @@
+# ============================================
+# AuctionPrime - Configurazione Principale
+# ============================================
+
+# Lingua predefinita (it_IT, en_US)
+lingua: "it_IT"
+
+# Comando da eseguire quando si preme il pulsante Indietro/Esci
+# Lascia vuoto per chiudere semplicemente la GUI
+comando-indietro: ""
+
+# ============================================
+# Impostazioni Generali
+# ============================================
+generale:
+  # Durata massima di un'inserzione in ore
+  durata-inserzione: 48
+  # Numero massimo di inserzioni per giocatore
+  max-inserzioni: 10
+  # Cooldown in secondi tra una inserzione e l'altra
+  cooldown-inserzioni: 5
+  # Giorni prima che gli oggetti scaduti/cancellati vengano eliminati
+  giorni-pulizia-automatica: 7
+  # Annuncia nuove inserzioni a tutti i giocatori
+  annuncia-inserzioni: true
+  # Suono alla vendita (lascia vuoto per disabilitare)
+  suono-vendita: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  suono-apertura-gui: "BLOCK_CHEST_OPEN"
+  suono-errore: "ENTITY_VILLAGER_NO"
+
+# ============================================
+# Economia
+# ============================================
+economia:
+  # Costo fisso per inserire un oggetto
+  costo-fisso-inserzione: 0.0
+  # Percentuale sul prezzo di vendita come costo inserzione (0-100)
+  percentuale-costo-inserzione: 0.0
+  # Tassa percentuale sul ricavo per il venditore (0-100)
+  tassa-vendita: 5.0
+  # Tassa massima applicabile (0 = nessun limite)
+  tassa-massima: 1000.0
+  # Prezzo minimo per un oggetto
+  prezzo-minimo: 1.0
+  # Prezzo massimo per un oggetto (0 = nessun limite)
+  prezzo-massimo: 0.0
+
+# ============================================
+# Restrizioni Oggetti
+# ============================================
+restrizioni:
+  # Blocca oggetti con Curse of Vanishing / Curse of Binding
+  blocca-maledizioni: true
+  # Blocca oggetti soulbound (lore contenente "Soulbound")
+  blocca-soulbound: true
+  # Lista di oggetti vietati per tipo (Material name)
+  tipi-vietati:
+    - "BEDROCK"
+    - "COMMAND_BLOCK"
+    - "BARRIER"
+  # Restrizioni per nome (supporta regex:<expr>)
+  nomi-vietati:
+    - "regex:(?i).*admin.*"
+    - "regex:(?i).*staff.*"
+  # Restrizioni per lore
+  lore-vietate:
+    - "Non vendibile"
+    - "regex:(?i).*soulbound.*"
+  # Restrizioni per incantesimi (nome:livello_minimo, 0 = qualsiasi livello)
+  incantesimi-vietati: []
+  # Restrizioni per custom_model_data
+  custom-model-data-vietati: []
+  # Blocca oggetti danneggiati
+  blocca-danneggiati: false
+  # Blocca oggetti indistruttibili
+  blocca-indistruttibili: false
+
+# ============================================
+# Inserzioni Server (oggetti del server)
+# ============================================
+inserzioni-server:
+  abilitate: false
+  # Lista di oggetti server preconfigurati
+  lista: []
+  # Esempio:
+  # lista:
+  #   - materiale: "DIAMOND_SWORD"
+  #     nome: "&bSpada Leggendaria"
+  #     lore:
+  #       - "&7Una spada forgiata dagli dei"
+  #     incantesimi:
+  #       SHARPNESS: 5
+  #     prezzo: 5000.0
+  #     illimitato: true
+
+# ============================================
+# Interazione (Cartelli, Entità, Blocchi)
+# ============================================
+interazione:
+  # Abilita apertura tramite cartelli con testo specifico
+  cartelli:
+    abilitati: true
+    testo: "[Mercato]"
+  # Abilita apertura tramite entità con nome specifico
+  entita:
+    abilitate: true
+    nomi:
+      - "&6&lMercato"
+      - "&e&lCasa d'Aste"
+  # Abilita apertura tramite blocchi nominati (casse, shulker, ecc.)
+  blocchi:
+    abilitati: true
+    nomi:
+      - "&6&lMercato"
+
+# ============================================
+# Multi-Mondo
+# ============================================
+multi-mondo:
+  abilitato: false
+  # Gruppi di mondi che condividono lo stesso mercato
+  gruppi:
+    default:
+      - "world"
+      - "world_nether"
+      - "world_the_end"
+
+# ============================================
+# Discord Webhook
+# ============================================
+discord:
+  abilitato: false
+  webhook-url: ""
+  # Colore embed in decimale (verde = 65280)
+  colore-embed: 65280
+  nome-bot: "AuctionPrime"
+  avatar-url: ""
+
+# ============================================
+# GUI - Materiali e Layout
+# ============================================
+gui:
+  # Righe della GUI principale (da 2 a 6, gli oggetti occupano righe - 1)
+  righe: 6
+  # Materiali dei pulsanti
+  materiali:
+    bordo: "BLACK_STAINED_GLASS_PANE"
+    pagina-precedente: "ARROW"
+    pagina-successiva: "ARROW"
+    cerca: "COMPASS"
+    vendi: "GOLD_INGOT"
+    inserzioni-personali: "BOOK"
+    oggetti-scaduti: "CHEST"
+    oggetti-venduti: "EMERALD"
+    ordina: "HOPPER"
+    indietro: "BARRIER"
+    conferma: "LIME_STAINED_GLASS_PANE"
+    annulla: "RED_STAINED_GLASS_PANE"
+    info: "OAK_SIGN"
+  # Supporto HeadDatabase: hdb:<id>
+  # Supporto texture custom: texture:<base64>
+  # Supporto testa giocatore: player_head
+
+# ============================================
+# Logging
+# ============================================
+logging:
+  # Abilita log delle transazioni su file
+  abilitato: true
+  # Nome del file di log
+  file: "transazioni.log"

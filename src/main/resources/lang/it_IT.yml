@@ -1,0 +1,226 @@
+# ============================================
+# AuctionPrime - Lingua Italiana (Predefinita)
+# ============================================
+
+prefisso: "&8[&6Mercato&8] &r"
+
+# Messaggi generali
+messaggi:
+  nessun-permesso: "&cNon hai il permesso per farlo."
+  solo-giocatori: "&cQuesto comando può essere eseguito solo da un giocatore."
+  config-ricaricata: "&aConfigurazione ricaricata con successo!"
+  oggetto-non-in-mano: "&cDevi tenere in mano l'oggetto che vuoi vendere."
+  prezzo-non-valido: "&cIl prezzo inserito non è valido."
+  prezzo-troppo-basso: "&cIl prezzo minimo è &e{min}&c."
+  prezzo-troppo-alto: "&cIl prezzo massimo è &e{max}&c."
+  max-inserzioni-raggiunto: "&cHai raggiunto il numero massimo di inserzioni (&e{max}&c)."
+  cooldown-attivo: "&cDevi attendere &e{tempo}&c secondi prima di inserire un altro oggetto."
+  oggetto-vietato: "&cQuesto oggetto non può essere venduto."
+  inserzione-creata: "&aHai messo in vendita &e{oggetto} &aper &e{prezzo}&a!"
+  inserzione-cancellata: "&aHai cancellato l'inserzione. L'oggetto ti è stato restituito."
+  oggetto-comprato: "&aHai acquistato &e{oggetto} &ada &e{venditore} &aper &e{prezzo}&a!"
+  oggetto-venduto: "&aIl tuo &e{oggetto} &aè stato venduto a &e{compratore} &aper &e{prezzo}&a! (Tassa: &e{tassa}&a)"
+  soldi-insufficienti: "&cNon hai abbastanza soldi per acquistare questo oggetto."
+  inserzione-non-trovata: "&cQuesta inserzione non è più disponibile."
+  inventario-pieno: "&cIl tuo inventario è pieno! L'oggetto è stato lasciato ai tuoi piedi."
+  nessun-oggetto-scaduto: "&cNon hai oggetti scaduti da ritirare."
+  oggetti-scaduti-ritirati: "&aHai ritirato &e{quantita} &aoggetti scaduti."
+  annuncio-nuova-inserzione: "&e{giocatore} &7ha messo in vendita &e{oggetto} &7per &e{prezzo}&7!"
+  conferma-costo: "&7Costo inserzione: &e{costo} &7(Fisso: &e{fisso}&7, Percentuale: &e{percentuale}&7)"
+  nessun-risultato: "&cNessun risultato trovato per la tua ricerca."
+  ricerca-attiva: "&7Ricerca attiva: &e{query}"
+  uso-vendi: "&cUso: /mercato vendi <prezzo>"
+  uso-cerca: "&cUso: /mercato cerca <query>"
+  cartello-cerca-riga1: "Scrivi il nome"
+  cartello-cerca-riga2: "dell'oggetto"
+  economia-non-pronta: "&cIl sistema economico non è ancora pronto. Riprova tra poco."
+  mondo-non-abilitato: "&cIl mercato non è disponibile in questo mondo."
+
+# Titoli GUI
+gui:
+  titolo-principale: "&8Mercato - Pagina {pagina}"
+  titolo-inserzioni: "&8Le Tue Inserzioni"
+  titolo-scaduti: "&8Oggetti Scaduti"
+  titolo-venduti: "&8Oggetti Venduti"
+  titolo-cerca: "&8Risultati Ricerca"
+  titolo-conferma-vendita: "&8Conferma Vendita"
+  titolo-conferma-acquisto: "&8Conferma Acquisto"
+
+# Pulsanti GUI
+pulsanti:
+  pagina-precedente: "&ePagina Precedente"
+  pagina-successiva: "&ePagina Successiva"
+  cerca: "&eCerca Oggetto"
+  cerca-lore:
+    - "&7Clicca per cercare"
+    - "&7un oggetto nel mercato."
+  vendi: "&aVendi Oggetto"
+  vendi-lore:
+    - "&7Clicca per vendere"
+    - "&7l'oggetto nella tua mano."
+  inserzioni-personali: "&bLe Tue Inserzioni"
+  inserzioni-personali-lore:
+    - "&7Visualizza gli oggetti"
+    - "&7che stai vendendo."
+  oggetti-scaduti: "&cOggetti Scaduti"
+  oggetti-scaduti-lore:
+    - "&7Ritira gli oggetti"
+    - "&7scaduti o cancellati."
+  oggetti-venduti: "&aOggetti Venduti"
+  oggetti-venduti-lore:
+    - "&7Visualizza gli oggetti"
+    - "&7venduti di recente."
+  ordina: "&eOrdina Per"
+  ordina-lore:
+    - "&7Attuale: &e{ordinamento}"
+    - "&7Clicca per cambiare."
+  indietro: "&cIndietro"
+  indietro-lore:
+    - "&7Torna al menù precedente."
+  conferma: "&a&lCONFERMA"
+  conferma-lore:
+    - "&7Clicca per confermare."
+  annulla: "&c&lANNULLA"
+  annulla-lore:
+    - "&7Clicca per annullare."
+  info: "&e&lInformazioni"
+  bordo: " "
+
+# Formato oggetto nella GUI
+formato-oggetto:
+  lore-aggiuntiva:
+    - ""
+    - "&7Prezzo: &e{prezzo}"
+    - "&7Venditore: &e{venditore}"
+    - "&7Scade tra: &e{tempo}"
+    - ""
+    - "&eClicca per acquistare!"
+  lore-proprio:
+    - ""
+    - "&7Prezzo: &e{prezzo}"
+    - "&7Scade tra: &e{tempo}"
+    - ""
+    - "&cClicca per cancellare!"
+  lore-venduto:
+    - ""
+    - "&7Venduto a: &e{compratore}"
+    - "&7Prezzo: &e{prezzo}"
+    - "&7Quando: &e{tempo}"
+
+# Ordinamenti
+ordinamenti:
+  recente: "Più Recente"
+  vecchio: "Più Vecchio"
+  prezzo-crescente: "Prezzo Crescente"
+  prezzo-decrescente: "Prezzo Decrescente"
+
+# Formato tempo
+tempo:
+  giorni: "{n}g"
+  ore: "{n}h"
+  minuti: "{n}m"
+  secondi: "{n}s"
+  scaduto: "Scaduto"
+
+# Help comandi
+help:
+  intestazione: "&8&m─────────────&r &6&lMercato &8&m─────────────"
+  mercato: " &e/mercato &8- &7Apre il mercato"
+  vendi: " &e/mercato vendi <prezzo> &8- &7Vendi l'oggetto in mano"
+  cerca: " &e/mercato cerca &8- &7Cerca un oggetto"
+  inserzioni: " &e/mercato inserzioni &8- &7Le tue inserzioni attive"
+  scaduti: " &e/mercato scaduti &8- &7Ritira oggetti scaduti"
+  venduti: " &e/mercato venduti &8- &7Visualizza oggetti venduti"
+  admin: " &c/mercato admin &8- &7Pannello amministrazione"
+  reload: " &c/mercato reload &8- &7Ricarica la configurazione"
+  piede: "&8&m──────────────────────────────────"
+
+# Pannello Admin
+admin:
+  titolo-lista: "&4&lAdmin &8- Pagina {pagina}"
+  titolo-dettaglio: "&4&lDettaglio Inserzione"
+  stato-attivo: "&a● Attivo"
+  stato-venduto: "&6● Venduto"
+  stato-cancellato: "&c● Cancellato"
+  stato-scaduto: "&7● Scaduto"
+  lore-lista:
+    - ""
+    - "&7Prezzo: &e{prezzo}"
+    - "&7Venditore: &e{venditore}"
+    - "&7Stato: {stato}"
+    - "&7ID: &8{id}..."
+    - ""
+    - "&eClicca per gestire"
+  lore-dettaglio:
+    - "&7Prezzo: &e{prezzo}"
+    - "&7Venditore: &e{venditore}"
+    - "&7UUID Venditore: &8{venditore-uuid}"
+    - "&7Stato: {stato}"
+    - "&7ID: &8{id}"
+    - "&7Creato: &e{creazione}"
+    - "&7Scade: &e{scadenza}"
+    - "&7Mondo: &e{mondo}"
+  pulsante-rimuovi: "&c&lRimuovi Inserzione"
+  pulsante-rimuovi-lore:
+    - "&7Rimuove permanentemente"
+    - "&7questa inserzione dal mercato."
+    - ""
+    - "&c⚠ Azione irreversibile!"
+  pulsante-modifica-prezzo: "&e&lModifica Prezzo"
+  pulsante-modifica-prezzo-lore:
+    - "&7Apri un cartello per"
+    - "&7inserire il nuovo prezzo."
+  pulsante-dimezza-prezzo: "&7Dimezza Prezzo"
+  pulsante-dimezza-prezzo-lore:
+    - "&7Nuovo prezzo: &e{prezzo}"
+    - ""
+    - "&eClicca per dimezzare."
+  pulsante-raddoppia-prezzo: "&6Raddoppia Prezzo"
+  pulsante-raddoppia-prezzo-lore:
+    - "&7Nuovo prezzo: &e{prezzo}"
+    - ""
+    - "&eClicca per raddoppiare."
+  pulsante-cambia-venditore: "&d&lCambia Venditore"
+  pulsante-cambia-venditore-lore:
+    - "&7Apri un cartello per"
+    - "&7inserire il nome del"
+    - "&7nuovo venditore."
+  pulsante-riattiva: "&a&lRiattiva Inserzione"
+  pulsante-segna-scaduto: "&7&lSegna come Scaduto"
+  pulsante-toggle-scaduto-lore:
+    - "&7Attiva o disattiva lo"
+    - "&7stato di scadenza."
+  pulsante-rendi-limitato: "&7&lRendi Limitato"
+  pulsante-rendi-illimitato: "&5&lRendi Illimitato"
+  pulsante-toggle-illimitato-lore:
+    - "&7Attiva o disattiva lo"
+    - "&7stato illimitato."
+  pulsante-dai-copia: "&b&lDai Copia Oggetto"
+  pulsante-dai-copia-lore:
+    - "&7Aggiunge una copia dell'oggetto"
+    - "&7al tuo inventario."
+  pulsante-indietro: "&cTorna alla Lista"
+  pulsante-filtro-attivi: "&aFiltra: Solo Attivi"
+  pulsante-filtro-attivi-lore:
+    - "&7Mostra solo le inserzioni attive."
+  pulsante-filtro-tutti: "&7Filtra: Tutti"
+  pulsante-filtro-tutti-lore:
+    - "&7Mostra tutte le inserzioni."
+  pulsante-info: "&e&lStatistiche"
+  pulsante-info-lore:
+    - "&7Totale inserzioni: &e{totale}"
+    - "&7Attive: &a{attive}"
+    - "&7Pagina: &e{pagina}/{pagine}"
+  pulsante-chiudi: "&c&lChiudi"
+  cartello-prezzo-riga1: "Scrivi il nuovo"
+  cartello-prezzo-riga2: "prezzo"
+  cartello-venditore-riga1: "Scrivi il nome"
+  cartello-venditore-riga2: "del venditore"
+  messaggio-rimosso: "&aInserzione rimossa con successo."
+  messaggio-prezzo-modificato: "&aPrezzo modificato a &e{prezzo}&a."
+  messaggio-venditore-cambiato: "&aVenditore cambiato a &e{venditore}&a."
+  messaggio-giocatore-non-trovato: "&cGiocatore non trovato."
+  messaggio-riattivato: "&aInserzione riattivata."
+  messaggio-scaduto: "&7Inserzione segnata come scaduta."
+  messaggio-toggle-illimitato: "&7Stato illimitato aggiornato."
+  messaggio-copia-data: "&aCopia dell'oggetto aggiunta al tuo inventario."

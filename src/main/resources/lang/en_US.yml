@@ -1,0 +1,219 @@
+# ============================================
+# AuctionPrime - English Language
+# ============================================
+
+prefisso: "&8[&6Market&8] &r"
+
+messaggi:
+  nessun-permesso: "&cYou don't have permission to do that."
+  solo-giocatori: "&cThis command can only be executed by a player."
+  config-ricaricata: "&aConfiguration reloaded successfully!"
+  oggetto-non-in-mano: "&cYou must hold the item you want to sell."
+  prezzo-non-valido: "&cThe price entered is not valid."
+  prezzo-troppo-basso: "&cThe minimum price is &e{min}&c."
+  prezzo-troppo-alto: "&cThe maximum price is &e{max}&c."
+  max-inserzioni-raggiunto: "&cYou have reached the maximum number of listings (&e{max}&c)."
+  cooldown-attivo: "&cYou must wait &e{tempo}&c seconds before listing another item."
+  oggetto-vietato: "&cThis item cannot be sold."
+  inserzione-creata: "&aYou listed &e{oggetto} &afor &e{prezzo}&a!"
+  inserzione-cancellata: "&aYou cancelled the listing. The item has been returned."
+  oggetto-comprato: "&aYou bought &e{oggetto} &afrom &e{venditore} &afor &e{prezzo}&a!"
+  oggetto-venduto: "&aYour &e{oggetto} &awas sold to &e{compratore} &afor &e{prezzo}&a! (Tax: &e{tassa}&a)"
+  soldi-insufficienti: "&cYou don't have enough money to buy this item."
+  inserzione-non-trovata: "&cThis listing is no longer available."
+  inventario-pieno: "&cYour inventory is full! The item was dropped at your feet."
+  nessun-oggetto-scaduto: "&cYou have no expired items to collect."
+  oggetti-scaduti-ritirati: "&aYou collected &e{quantita} &aexpired items."
+  annuncio-nuova-inserzione: "&e{giocatore} &7listed &e{oggetto} &7for &e{prezzo}&7!"
+  conferma-costo: "&7Listing fee: &e{costo} &7(Flat: &e{fisso}&7, Percentage: &e{percentuale}&7)"
+  nessun-risultato: "&cNo results found for your search."
+  ricerca-attiva: "&7Active search: &e{query}"
+  uso-vendi: "&cUsage: /mercato vendi <price>"
+  uso-cerca: "&cUsage: /mercato cerca <query>"
+  cartello-cerca-riga1: "Type the item"
+  cartello-cerca-riga2: "name to search"
+  economia-non-pronta: "&cThe economy system is not ready yet. Please try again shortly."
+  mondo-non-abilitato: "&cThe market is not available in this world."
+
+gui:
+  titolo-principale: "&8Market - Page {pagina}"
+  titolo-inserzioni: "&8Your Listings"
+  titolo-scaduti: "&8Expired Items"
+  titolo-venduti: "&8Sold Items"
+  titolo-cerca: "&8Search Results"
+  titolo-conferma-vendita: "&8Confirm Sale"
+  titolo-conferma-acquisto: "&8Confirm Purchase"
+
+pulsanti:
+  pagina-precedente: "&ePrevious Page"
+  pagina-successiva: "&eNext Page"
+  cerca: "&eSearch Item"
+  cerca-lore:
+    - "&7Click to search"
+    - "&7an item in the market."
+  vendi: "&aSell Item"
+  vendi-lore:
+    - "&7Click to sell"
+    - "&7the item in your hand."
+  inserzioni-personali: "&bYour Listings"
+  inserzioni-personali-lore:
+    - "&7View items"
+    - "&7you are selling."
+  oggetti-scaduti: "&cExpired Items"
+  oggetti-scaduti-lore:
+    - "&7Collect expired"
+    - "&7or cancelled items."
+  oggetti-venduti: "&aSold Items"
+  oggetti-venduti-lore:
+    - "&7View recently"
+    - "&7sold items."
+  ordina: "&eSort By"
+  ordina-lore:
+    - "&7Current: &e{ordinamento}"
+    - "&7Click to change."
+  indietro: "&cBack"
+  indietro-lore:
+    - "&7Return to previous menu."
+  conferma: "&a&lCONFIRM"
+  conferma-lore:
+    - "&7Click to confirm."
+  annulla: "&c&lCANCEL"
+  annulla-lore:
+    - "&7Click to cancel."
+  info: "&e&lInformation"
+  bordo: " "
+
+formato-oggetto:
+  lore-aggiuntiva:
+    - ""
+    - "&7Price: &e{prezzo}"
+    - "&7Seller: &e{venditore}"
+    - "&7Expires in: &e{tempo}"
+    - ""
+    - "&eClick to buy!"
+  lore-proprio:
+    - ""
+    - "&7Price: &e{prezzo}"
+    - "&7Expires in: &e{tempo}"
+    - ""
+    - "&cClick to cancel!"
+  lore-venduto:
+    - ""
+    - "&7Sold to: &e{compratore}"
+    - "&7Price: &e{prezzo}"
+    - "&7When: &e{tempo}"
+
+ordinamenti:
+  recente: "Newest"
+  vecchio: "Oldest"
+  prezzo-crescente: "Price Ascending"
+  prezzo-decrescente: "Price Descending"
+
+tempo:
+  giorni: "{n}d"
+  ore: "{n}h"
+  minuti: "{n}m"
+  secondi: "{n}s"
+  scaduto: "Expired"
+
+# Command Help
+help:
+  intestazione: "&8&m─────────────&r &6&lMarket &8&m─────────────"
+  mercato: " &e/mercato &8- &7Open the market"
+  vendi: " &e/mercato vendi <price> &8- &7Sell the item in your hand"
+  cerca: " &e/mercato cerca &8- &7Search for an item"
+  inserzioni: " &e/mercato inserzioni &8- &7Your active listings"
+  scaduti: " &e/mercato scaduti &8- &7Collect expired items"
+  venduti: " &e/mercato venduti &8- &7View sold items"
+  admin: " &c/mercato admin &8- &7Administration panel"
+  reload: " &c/mercato reload &8- &7Reload configuration"
+  piede: "&8&m──────────────────────────────────"
+
+# Admin Panel
+admin:
+  titolo-lista: "&4&lAdmin &8- Page {pagina}"
+  titolo-dettaglio: "&4&lListing Detail"
+  stato-attivo: "&a● Active"
+  stato-venduto: "&6● Sold"
+  stato-cancellato: "&c● Cancelled"
+  stato-scaduto: "&7● Expired"
+  lore-lista:
+    - ""
+    - "&7Price: &e{prezzo}"
+    - "&7Seller: &e{venditore}"
+    - "&7Status: {stato}"
+    - "&7ID: &8{id}..."
+    - ""
+    - "&eClick to manage"
+  lore-dettaglio:
+    - "&7Price: &e{prezzo}"
+    - "&7Seller: &e{venditore}"
+    - "&7Seller UUID: &8{venditore-uuid}"
+    - "&7Status: {stato}"
+    - "&7ID: &8{id}"
+    - "&7Created: &e{creazione}"
+    - "&7Expires: &e{scadenza}"
+    - "&7World: &e{mondo}"
+  pulsante-rimuovi: "&c&lRemove Listing"
+  pulsante-rimuovi-lore:
+    - "&7Permanently removes"
+    - "&7this listing from the market."
+    - ""
+    - "&c⚠ Irreversible action!"
+  pulsante-modifica-prezzo: "&e&lEdit Price"
+  pulsante-modifica-prezzo-lore:
+    - "&7Open a sign to enter"
+    - "&7the new price."
+  pulsante-dimezza-prezzo: "&7Halve Price"
+  pulsante-dimezza-prezzo-lore:
+    - "&7New price: &e{prezzo}"
+    - ""
+    - "&eClick to halve."
+  pulsante-raddoppia-prezzo: "&6Double Price"
+  pulsante-raddoppia-prezzo-lore:
+    - "&7New price: &e{prezzo}"
+    - ""
+    - "&eClick to double."
+  pulsante-cambia-venditore: "&d&lChange Seller"
+  pulsante-cambia-venditore-lore:
+    - "&7Open a sign to enter"
+    - "&7the new seller's name."
+  pulsante-riattiva: "&a&lReactivate Listing"
+  pulsante-segna-scaduto: "&7&lMark as Expired"
+  pulsante-toggle-scaduto-lore:
+    - "&7Toggle the expired"
+    - "&7status on or off."
+  pulsante-rendi-limitato: "&7&lMake Limited"
+  pulsante-rendi-illimitato: "&5&lMake Unlimited"
+  pulsante-toggle-illimitato-lore:
+    - "&7Toggle the unlimited"
+    - "&7status on or off."
+  pulsante-dai-copia: "&b&lGive Item Copy"
+  pulsante-dai-copia-lore:
+    - "&7Adds a copy of the item"
+    - "&7to your inventory."
+  pulsante-indietro: "&cBack to List"
+  pulsante-filtro-attivi: "&aFilter: Active Only"
+  pulsante-filtro-attivi-lore:
+    - "&7Show only active listings."
+  pulsante-filtro-tutti: "&7Filter: All"
+  pulsante-filtro-tutti-lore:
+    - "&7Show all listings."
+  pulsante-info: "&e&lStatistics"
+  pulsante-info-lore:
+    - "&7Total listings: &e{totale}"
+    - "&7Active: &a{attive}"
+    - "&7Page: &e{pagina}/{pagine}"
+  pulsante-chiudi: "&c&lClose"
+  cartello-prezzo-riga1: "Enter the new"
+  cartello-prezzo-riga2: "price"
+  cartello-venditore-riga1: "Enter the seller"
+  cartello-venditore-riga2: "name"
+  messaggio-rimosso: "&aListing removed successfully."
+  messaggio-prezzo-modificato: "&aPrice changed to &e{prezzo}&a."
+  messaggio-venditore-cambiato: "&aSeller changed to &e{venditore}&a."
+  messaggio-giocatore-non-trovato: "&cPlayer not found."
+  messaggio-riattivato: "&aListing reactivated."
+  messaggio-scaduto: "&7Listing marked as expired."
+  messaggio-toggle-illimitato: "&7Unlimited status updated."
+  messaggio-copia-data: "&aItem copy added to your inventory."
